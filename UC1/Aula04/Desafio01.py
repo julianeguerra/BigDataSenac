@@ -1,11 +1,15 @@
-altura = float(input('Insira a altura em metros.'))
 largura = float(input('Insira a largura em metros.'))
+comprimento = float(input('Insira o comprimento em metros.'))
 potencia = float(input('Insira a potência da lâmpada.'))
 
 
-area = altura * largura
+area = largura * comprimento
 
-n_lampadas = (area * potencia)/3
+potencia_necessaria = area * 3
+
+n_lampadas = potencia_necessaria/potencia
+
+n_bocais = area / 3
 
 print(f'São necessárias {n_lampadas}')
 
