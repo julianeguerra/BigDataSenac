@@ -7,7 +7,7 @@ area = altura * largura
 
 n_lampadas = (area * potencia)/3
 
-print(f'São necessárias {n_lampadas}')
+print(f'São necessárias {n_lampadas} lâmpadas.')
 
 #a cada 3 m² = 3 lampadas 
 #para limitar as casas decimais > :.2f
