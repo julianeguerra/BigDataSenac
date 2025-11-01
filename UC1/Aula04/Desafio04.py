@@ -10,7 +10,7 @@ try:
         case 4:
             print('Oeste')
         case 5 | 6:
-            print('Nordente')
+            print('Nordeste')
         case 7 | 8 | 9:
             print('Sudeste')
         case 10:
