@@ -12,4 +12,4 @@ while contador < limite: # A condição de parada: Enquanto o contador for menor
         contador = contador + 1 # IMPORTANTÍSSIMO! Incrementa o contador para evitar loop
     except ValueError:
         print("Entrada inválida. Tente novamente.")
-    # Não incrementamos o contador para dar nova chance ao usuário
+    # Não incrementamos o contador para dar nova chance ao usuários
