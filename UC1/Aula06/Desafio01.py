@@ -1,3 +1,4 @@
+resultados = []
 for i in range(5):
     try:
         n1 = float(input("Nota N1: "))
@@ -26,7 +27,12 @@ for i in range(5):
             situacao = "EM EXAME (Recuperação)"
 
         print(f"Resultado:\n  Média Final: {media:.1f}")
-        print(f"  Situação: {situacao}\n")
+        print(f" Aluno {i + 1}: {situacao}\n")
+        
+        resultados.append(f" Aluno {i + 1}: {situacao}\n")
 
     except ValueError:
         print("ERRO: Digite apenas números válidos.")
+
+for estudantes in resultados:
+    print(estudantes)
