@@ -1,6 +1,6 @@
 avaliacao1 = float(input('Insira a nota da avaliação 1:'))
 avaliacao2 = float(input('Insira a nota da avaliação 2:'))
-optativa = None
+optativa = float(input('Insira nota optativa (-1 se não fez): '))
 
 media = (avaliacao1 + avaliacao2)/2
 

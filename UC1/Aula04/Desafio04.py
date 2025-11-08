@@ -1,5 +1,5 @@
 try:
-    codigo = float(input('Insira um código.'))
+    codigo = int(input('Insira um código de origem.'))
     match codigo:
         case 1:
             print('Sul')
