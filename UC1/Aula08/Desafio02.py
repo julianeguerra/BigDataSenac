@@ -19,5 +19,5 @@ for pessoa in range(lista_pessoas):
     altura_pessoa = float(input(f'Insira a altura da pessoa {pessoa +1} (metros): '))
     imc_pessoa = calcular_imc(peso_pessoa, altura_pessoa)
     classificacao = obter_classificacao(imc_pessoa)
-    print(f'Seu IMC é: {imc_pessoa}.\nSua classificação é: {classificacao}.')
+    print(f'Seu IMC é: {imc_pessoa:.2f}.\nSua classificação é: {classificacao}.')
 
