@@ -66,13 +66,13 @@ def mostrar_cardapio(): #Mostra os pratos do cardápio formatados linha a linha 
         
         
 def fazer_pedido(): #Estrutura para o cliente fazer o pedido.
-    pedido = {}
-    itens_pedidos = []
+    pedido = {} #dicionário para armazenar os pedidos
+    itens_pedidos = [] #lista 
     nao_terminou_escolher = True
     
     while nao_terminou_escolher: #Loop para continuar perguntando ao cliente se ele quer pedir mais alguma coisa.
         try:
-            opcao = int(input('Digite o número do prato (ou 0 para encerrar): '))
+            opcao = int(input('Digite o número do prato: '))
             quantidade = 0
             prato = None
             
@@ -106,15 +106,15 @@ def fazer_pedido(): #Estrutura para o cliente fazer o pedido.
     mesas_disponiveis = print(f'As mesas disponíveis são: {mesas}.')
     pedido['idMesa'] = int(input('Qual o número da mesa? '))
     
-    if pedido['idMesa'] in mesas: # O código deve remover o número da mesa escolhido dos números disponíveis
+    if pedido['idMesa'] in mesas: # O código remove o número da mesa escolhido dos números disponíveis.
         mesas.remove(pedido['idMesa'])
     
-    pedido['id'] = random.randint(100, 1000) 
+    pedido['id'] = random.randint(100, 1000) #Gera um número de pedido aleatório.
     pedidos.append(pedido)
     
-    print(f'Seu pedido é {pedido['id']}')
+    print(f"Seu pedido é {pedido['id']}")
     
-def calculo_pedidos(quantidade, preco): # confirmar se é válido. A função depois vai calcular o preço do item e quantidade.
+def calculo_pedidos(quantidade, preco): # Função para calcular o preço do item vezes a quantidade.
     return quantidade * preco
 
 def calcular_conta(id_pedido):
@@ -134,16 +134,16 @@ nao_fez_todos_pedidos = True
 
 while nao_fez_todos_pedidos:
     fazer_pedido()
-    nao_fez_todos_pedidos = input('Deseja fazer outro pedido? Sim ou Não').strip().lower() == 'sim'
+    nao_fez_todos_pedidos = input('Quer fazer outro pedido? Sim ou Não').strip().lower() == 'sim'
 
 nao_pagou_todos = True
 
 while nao_pagou_todos:
-    id_pedido = int(input('Digite o numero do pedido que deseja pagar: '))
+    id_pedido = int(input('Digite o numero do pedido para pagamento: '))
     
     print(f'Você deve: R$ {calcular_conta(id_pedido):.2f}')
     
-    nao_pagou_todos = input('Deseja pagar outro pedido? Sim ou Não').strip().lower() == 'sim'
+    nao_pagou_todos = input('Quer pagar outro pedido? Sim ou Não').strip().lower() == 'sim'
     
     
                 

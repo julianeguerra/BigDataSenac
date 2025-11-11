@@ -1,0 +1,9 @@
+Instruções para o projeto.
+
+O garçom tem que conseguir ver o que o cliente escolheu. O garçom só chega no cliente para entregar o pedido. 
+    O cliente clica em dar baixa no pedido para informar que ele foi entregue
+Inserir forma de pagamento.
+Loop para outros pedidos
+Identificar o garçom, um id de garçom para cada mesa (random). Usar match case para atribuir o garçom à mesa???
+Simular input de pagamento e gerar número de nota fiscal
+
