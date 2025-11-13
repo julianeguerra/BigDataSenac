@@ -1,6 +1,9 @@
 lista_pessoas = int(input('Quantas pessoas devemos avaliar?'))
 
 def calcular_imc(peso, altura):
+    if altura <= 0:
+        print('Altura inválida. Não é possível calcular.')
+        return 0.0
     imc = peso / (altura * altura)
     return imc
 

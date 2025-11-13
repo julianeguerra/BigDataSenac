@@ -54,9 +54,9 @@ pedidos = [
     }
 ]
 # ----------------- Fim da estrutura dos pedidos ------------------
-mesas = [1,2,3,4,5]
+mesas = [1,2,3,4,5] # Número de mesas disponíveis
 
-garcons = [1,2,3,4,5]
+garcons = ['Júlio', 'Roberto', 'Mário', 'Janaína', 'Tereza'] # Garçons disponíveis
 
 
 def mostrar_cardapio(): #Mostra os pratos do cardápio formatados linha a linha para o cliente escolher.
@@ -66,14 +66,14 @@ def mostrar_cardapio(): #Mostra os pratos do cardápio formatados linha a linha 
         
         
 def fazer_pedido(): #Estrutura para o cliente fazer o pedido.
-    pedido = {} #dicionário para armazenar os pedidos
-    itens_pedidos = [] #lista 
+    pedido = {} #dicionário para armazenar o pedido
+    itens_pedidos = [] #lista para armazenar os pedidos totais
     nao_terminou_escolher = True
     
     while nao_terminou_escolher: #Loop para continuar perguntando ao cliente se ele quer pedir mais alguma coisa.
         try:
             opcao = int(input('Digite o número do prato: '))
-            quantidade = 0
+            quantidade = 0 #
             prato = None
             
             for item in cardapio:
@@ -117,7 +117,7 @@ def fazer_pedido(): #Estrutura para o cliente fazer o pedido.
 def calculo_pedidos(quantidade, preco): # Função para calcular o preço do item vezes a quantidade.
     return quantidade * preco
 
-def calcular_conta(id_pedido):
+def calcular_conta(id_pedido): #Função para calcular a conta com os pedidos adicionados e suas respectivas quantidades.
     total = 0
     for pedido in pedidos:
         if pedido['id'] == id_pedido:
