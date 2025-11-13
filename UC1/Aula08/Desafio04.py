@@ -1,11 +1,12 @@
 def eh_bissexto(ano):
-    if (ano % 4 == 0) or (ano % 400 == 0) not (ano % 100 == 0):
-        print(f'O ano {ano} é bissexto.')
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+        return True
     else:
-        print(f'O ano {ano} não é bissexto.')
+        return False
 
 try:
-    ano = int(input('Insira um ano:'))
+    ano_usuario = int(input('Insira um ano:'))
+    ano = eh_bissexto(ano_usuario)
 except ValueError:
     print('ERRO: insira um ano váldido.')      
 
