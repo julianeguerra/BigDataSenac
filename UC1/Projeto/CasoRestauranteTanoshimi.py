@@ -1,5 +1,5 @@
 import random #Importa a biblioteca nativa random
-# ------------------- Início do cardápio (dicionário) --------------------
+# ------------------- Início do cardápio (lista de dicionário) --------------------
 cardapio = [ 
         {
             "id": 1,
@@ -72,7 +72,7 @@ def fazer_pedido(): #Estrutura para o cliente fazer o pedido.
     nao_terminou_escolher = True # Controle do loop
     
     mesas_disponiveis = print(f'As mesas disponíveis são: {mesas}.') #Exibe as mesas disponíveis
-    pedido['idMesa'] = int(input('Escolha uma mesa? '))
+    pedido['idMesa'] = int(input('Escolha uma mesa. '))
     
     while True:
         try:
@@ -170,6 +170,3 @@ while nao_pagou_todos:
         nao_pagou_todos = input('Quer pagar outro pedido? Sim ou Não: ').strip().lower() == 'sim'
     except  ValueError:
         print('ERRO: insira um número válido.')
-    
-                
-    
