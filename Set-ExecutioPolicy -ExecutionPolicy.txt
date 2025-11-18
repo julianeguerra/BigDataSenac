@@ -1,0 +1,4 @@
+para criar o VENV: python -m venv mv_juliane
+PS C:\Users\juliane.guerra\OneDrive - SENAC RIO\Documentos> mv_juliane\Scripts\activate
+
+para caso dê erro: Set-ExecutioPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
