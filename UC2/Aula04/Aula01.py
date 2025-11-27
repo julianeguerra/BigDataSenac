@@ -1,4 +1,8 @@
 import pandas as pd
+# df = pd.read_csv('vendas_produtos.csv')
+#print(df.head())
+
+
 import mysql.connector
 
 # 1. Conectar ao banco de dados
@@ -30,6 +34,7 @@ cursor.close()
 conexao.close()
 
 ######################
+import mysql.connector
 
 def obter_dados_do_banco(query):
     try:
