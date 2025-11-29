@@ -55,9 +55,9 @@ IGNORE 1 ROWS
 -- Criar tabela pedidos
 CREATE TABLE pedidos (
  id_pedido INT PRIMARY KEY,
- data_pedido DATE,
- valor_total DECIMAL(10, 2),
  id_cliente INT,
+ data_pedido DATE,
+ valor_total DECIMAL(10, 2), 
  id_produto INT,
  quantidade INT,
  FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
@@ -65,7 +65,7 @@ CREATE TABLE pedidos (
 );
 
 -- Comando para alterar a tabela e inserir colunas
--- Exemplo para alterar e inserir chave estrangeira
+-- --- Exemplo para alterar e inserir chave estrangeira ---
 ALTER TABLE pedidos
 ADD CONSTRAINT fk_pedidos_clientes
 FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente);
@@ -75,10 +75,19 @@ ADD CONSTRAINT fk_pedidos_produtos
 FOREIGN KEY (id_produto) REFERENCES produtos(id_produto);
 
 -- Carregar tabela pedidos (carreguei pelo table wizard)
-LOAD DATA LOCAL INFILE
-INTO TABLE vendas_online.pedidos
-FIELDS TERMINATED BY '\r\n'
-IGNORE 1 ROWS
-(id_pedido, id_cliente, data_pedido, valor_total, id_produto, quantidade)
+-- LOAD DATA LOCAL INFILE
+-- INTO TABLE vendas_online.pedidos
+-- FIELDS TERMINATED BY '\r\n'
+-- IGNORE 1 ROWS
+-- (id_pedido, id_cliente, data_pedido, valor_total, id_produto, quantidade)
 
- SELECT * FROM pedidos, clientes, produtos;
+ SELECT * FROM clientes, pedidos, produtos;
+ 
+SELECT c.nome, p.data_pedido
+FROM clientes c
+JOIN pedidos p ON c.id_cliente = p.id_cliente;
+
+SELECT c.nome as Cliente, p.data_pedido, t.nome as Produto
+FROM clientes c
+JOIN pedidos p ON c.id_cliente = p.id_cliente
+JOIN produtos t ON t.id_produto = p.id_produto;
