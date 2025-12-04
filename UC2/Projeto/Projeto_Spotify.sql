@@ -21,3 +21,8 @@ album_type VARCHAR(50)
 
 SELECT * FROM track_data_final;
 
+SELECT track_popularity > 50;
+
+SELECT track_name, album_release_date FROM track_data_final
+WHERE album_release_date = 0000-00-00;
+
