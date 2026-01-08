@@ -1,0 +1,3 @@
+Análise de músicas acima do db mais saudável com a coluna loudness
+A relação de energy com danceability
+Relação de loudness com acousticness
